@@ -9,7 +9,7 @@ use vars qw($VERSION @ISA $ERROR);
 use MIME::Entity;
 use File::Spec;
 
-$VERSION = '0.94';
+$VERSION = '0.95';
 
 @ISA = qw(MIME::Entity);
 
@@ -221,6 +221,7 @@ sub _remove_attachments {
 
 __END__
 
+=encoding utf-8
 
 =head1 NAME
 
@@ -375,13 +376,57 @@ Note that the attachment is not removed.
 C<Mail::Audit::Attach::error> will return an error message if an
 action failed (currently only set by C<save>).
 
+=head1 HISTORY
+
+=item 0.95, 2010-02-26
+
+    - Created GitHub repository
+    - Fixed RT#19546: Added missing dependency MIME::Base64
+
+=item 0.94  Sun Jun 05 23:00:00 2005
+
+    - Updated distribution to more modern format.
+    - Added POD tests.
+
+=item 0.93  Sat Apr 14 00:30:00 2003
+
+    - Mail::Audit->save died when passed an empty location. Fixed.
+      location is now optional.
+    - Now uses File::Spec for more portability
+    - Introduced Mail::Audit::error (used by save)
+    - Localized $_ where used
+
+=item 0.92  Sat Feb  8 13:00:00 2003
+
+	- Now relies on MIME::Head to recognize attachments.
+	  "Never try to be too clever."
+	- No more warnings.
+
+=item 0.91  Thu Feb  6 22:30:00 2003
+
+  - Now recognizes attachments with Content-Disposition inline,
+    but a given filename. This became necessary because Netscape
+   	Communicator and other clients send their attachments that way.
+
+	  Thanks to Jeff Engelhardt and Vladimir Parkhaev for bringing
+          this to my attention.
+
+=item 0.90  Sat Jun  1 19:35:24 2002
+
+	- original version; created by h2xs 1.19
+
+
+=head1 DEVELOPMENT NOTES
+
+Please report any bugs using the CPAN RT system. The development repository for this module is hosted on GitHub: L<http://github.com/crenz/Mail-Audit-Attach/>.
+
 =head1 AUTHOR
 
 Christian Renz <crenz@web42.com>
 
 =head1 LICENSE
 
-Copyright (C) 2002-2005 Christian Renz <crenz@web42.com>
+Copyright (C) 2002-2010 Christian Renz <crenz@web42.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
