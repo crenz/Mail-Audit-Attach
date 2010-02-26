@@ -1,0 +1,14 @@
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Mail-Audit-Attach
+version:      0.94
+version_from: lib/Mail/Audit/Attach.pm
+installdirs:  site
+requires:
+    MIME::Head:                    5
+    Mail::Audit:                   2
+    Mail::Header:                  1
+    MIME::Entity:                  5
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.12
