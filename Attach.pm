@@ -1,6 +1,6 @@
 package Mail::Audit::Attach;
 
-# Copyright (c) 2002-2005 Christian Renz <crenz@web42.com>. All rights reserved.
+# Copyright (c) 2002-2010 Christian Renz <crenz@web42.com>. All rights reserved.
 # This program is free software; you can redistribute it and/or modify
 # it under the same terms as Perl itself.
 
@@ -9,7 +9,7 @@ use vars qw($VERSION @ISA $ERROR);
 use MIME::Entity;
 use File::Spec;
 
-$VERSION = '0.95';
+$VERSION = '0.96';
 
 @ISA = qw(MIME::Entity);
 
@@ -378,6 +378,13 @@ action failed (currently only set by C<save>).
 
 =head1 HISTORY
 
+=over 4
+
+=item 0.96, 2010-02-28
+
+    - Fixed POD bug introduced in 0.95
+    - Upgraded to Makefile.PL in the style of Alexandr Ciornii (v0.21)
+
 =item 0.95, 2010-02-26
 
     - Created GitHub repository
@@ -415,6 +422,7 @@ action failed (currently only set by C<save>).
 
 	- original version; created by h2xs 1.19
 
+=back
 
 =head1 DEVELOPMENT NOTES
 
